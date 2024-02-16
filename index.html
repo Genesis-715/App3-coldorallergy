@@ -52,7 +52,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function getResult(){
 		var allergyPercent=(allergy_count/6)*100;
 		var coldPercent=(cold_count/6)*100;
-		var resultText= document.getElementById("seven");
+		var resultText= document.getElementById("results");
 		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 		
 		
@@ -161,11 +161,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Do you have circles under yours eyes?</p>
-		<a href="#seven" onclick="allergyAdd()" class="w3-btn w3-purple">Yes</a> 
-		<a href="#seven" onclick="coldAdd()" class="w3-btn w3-purple">No</a>
+		<a href="#results" onclick="allergyAdd()" class="w3-btn w3-purple">Yes</a> 
+		<a href="#results" onclick="coldAdd()" class="w3-btn w3-purple">No</a>
 	</div>
 </div>
-<div class="page" id="seven">
+<div class="page" id="results">
 	<div class="w3-container w3-flat-carrot">
 		<h1>End</h1>
 	</div>
@@ -175,7 +175,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 		<button onclick="getResult();">Results </button>
-		<p id="seven"></p>
+		<p id="results"></p>
 	</div>
 	</div>
 		
