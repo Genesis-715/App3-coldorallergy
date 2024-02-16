@@ -51,8 +51,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	}//end of coldAdd
 
 function getResult() {
-    		var allergyPercent = (allergy_count/6)*100; //divides the allergy count by the total number of questons asked (4) and converts to percentage.
-    		var coldPercent = (cold_count/6)*100; //divides the cold count by the total number of questons asked (4) and converts to percentage
+    		var allergyPercent = (allergy_count/6)*100; //divides the allergy count by the total number of questons asked (6) and converts to percentage.
+    		var coldPercent = (cold_count/6)*100; //divides the cold count by the total number of questons asked (6) and converts to percentage
     		var resultText = document.getElementById("results");
     resultText.innerHTML = "Percentage it is allergies =" + allergyPercent + "<br> Percentage it is a cold =" + coldPercent;
         }
@@ -102,21 +102,24 @@ function getResult() {
 	</div>
 	
     	<div id="content" class="w3-container">
+	//First question to add to allergy variable count
         <p>Are your eyes watery or itchy?</p> 
 		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-purple">Yes</a> 
 		<a href="#two" onclick="coldAdd();" class="w3-btn w3-purple">No</a>
+		//end to question 1
     	</div>
 </div>
-
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
+	//Second question to add to cold variable count
 	<p>Do you have a fever?</p>
 		<a href="#three" onclick="coldAdd();" class="w3-btn w3-purple">Yes</a> 
 		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-purple">No</a>
+		//end of question 2
 	</div>
 </div>	
 <div class="page" id="three">
@@ -125,9 +128,11 @@ function getResult() {
 	</div>
 	
 	<div id="content" class="w3-container">
+	//Third question to add to allergy variable count
 	<p>Do you have a sore throat?</p>
 		<a href="#four" onclick="coldAdd();" class="w3-btn w3-purple">Yes</a> 
 		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-purple">No</a>
+		//end of question 3
 	</div>
 </div>	
 <div class="page" id="four">
@@ -136,9 +141,11 @@ function getResult() {
 	</div>
 	
 	<div id="content" class="w3-container">
+	//Fourth question to add to allergy variable count
 	<p>Are your symptoms seasonal or chronic?</p>
 		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-purple">Yes</a> 
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-purple">No</a>
+		//end of question 4
 	</div>
 </div>	
 <div class="page" id="five">
@@ -147,9 +154,11 @@ function getResult() {
 	</div>
 	
 	<div id="content" class="w3-container">
+	//Fifth question to add to cold variable count (extra cold question)
 	<p>Do you have muscle pain or body aches?</p>
 		<a href="#six" onclick="coldAdd();" class="w3-btn w3-purple">Yes</a> 
 		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-purple">No</a>
+		//end of question 5
 	</div>
 </div>	
 <div class="page" id="six">
@@ -158,9 +167,11 @@ function getResult() {
 	</div>
 	
 	<div id="content" class="w3-container">
+	//Sixth question to add to allergy variable count (extra allergy question)
 	<p>Do you have circles under yours eyes?</p>
 		<a href="#results" onclick="allergyAdd()" class="w3-btn w3-purple">Yes</a> 
 		<a href="#results" onclick="coldAdd()" class="w3-btn w3-purple">No</a>
+		//end of question 6
 	</div>
 </div>
 <div class="page" id="results">
